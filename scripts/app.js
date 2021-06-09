@@ -102,6 +102,8 @@ class App
     //Este metodo permite empezar los calculos
     _startProcess = () =>
     {
+        $("#math-preview").html("$$"+$("#inpFuncion").val()+"$$");
+        MathJax.typesetPromise();
         let pc = Process.getProcess();
         let porcentaje = 0;
 

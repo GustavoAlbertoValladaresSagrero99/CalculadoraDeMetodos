@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/modal.css">
     <title>Calculadora líneal de métodos</title>
 
 
@@ -15,6 +16,100 @@
 
 </head>
 <body>
+
+    <div class="modalContainer">
+        <div class="modal-area">
+            
+        </div>
+        <div class="modal">
+            <p class="modal-title">
+                Pasos usando método: <span><b>{Sin método}</b></span>
+            </p>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="ml-section-header">
+                        <p class="ml-section-title">
+                            Iteración: <span><b>1</b></span>
+                        </p>
+                        <div class="ml-section-values">
+                            <p>X0 = <span>0</span></p>
+                            <p>X1 = <span>1</span></p>
+                        </div>
+                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
+                    </div>
+                    <hr>
+                    <div class="ml-content">
+                        <div class="ml-step">
+                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="ml-section-header">
+                        <p class="ml-section-title">
+                            Iteración: <span><b>2</b></span>
+                        </p>
+                        <div class="ml-section-values">
+                            <p>X0 = <span>0</span></p>
+                            <p>X1 = <span>1</span></p>
+                        </div>
+                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
+                    </div>
+                    <hr>
+                    <div class="ml-content">
+                        <div class="ml-step">
+                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="ml-section-header">
+                        <p class="ml-section-title">
+                            Iteración: <span><b>3</b></span>
+                        </p>
+                        <div class="ml-section-values">
+                            <p>X0 = <span>0</span></p>
+                            <p>X1 = <span>1</span></p>
+                        </div>
+                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
+                    </div>
+                    <hr>
+                    <div class="ml-content">
+                        <div class="ml-step">
+                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
+                        </div>
+                        <div class="ml-step">
+                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <header id="header">
         <nav class="menu">
@@ -72,7 +167,6 @@
         <article class="article">
             <div class="article-header">
                 <h1>Datos de entrada</h1>
-                <a href="#" class="article-header-collapse"><i class="far fa-minus-square"></i></a>
             </div>
             <hr>
             <div class="article-info">
@@ -82,11 +176,11 @@
                     <div class="limites">
                         <div class="valores">
                             <label>Valor inicial X0</label>
-                            <input type="text" id="inpX0" placeholder="Ejemplo: -5" required></input>
+                            <input type="text" id="inpX0" placeholder="Ejemplo: -2" required></input>
                         </div>
                         <div class="valores">
                             <label>Valor inicial X1</label>
-                            <input type="text" id="inpX1" placeholder="Ejemplo: 5" required></input>
+                            <input type="text" id="inpX1" placeholder="Ejemplo: -5" required></input>
                         </div>
                         <div class="valores">
                             <label id="lblTolerancia">Tolerancia deseada</label>
@@ -108,14 +202,15 @@
                         </div>
                     </div>
                     <div class="container-btn">
-                        <button type="button" id="btnCalc">Calcular</button>
+                        <button class="btnActions" type="button" id="btnReset">Limpiar</button>
+                        <button class="btnActions" type="button" id="btnCalc">Calcular</button>
                     </div>
                 </form>
             </div>
         </article>
     </section>
 
-    <section>
+    <section id="r-container">
         <article class="article">
             <div class="article-header">
                 <h1>Resultados</h1>
@@ -159,11 +254,13 @@
     
 
 
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
     <script src="scripts/math.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/app.js" type="module"></script>
 </body>
 </html>

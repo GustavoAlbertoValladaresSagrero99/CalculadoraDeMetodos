@@ -117,6 +117,11 @@ section
 
 }
 
+#r-container
+{
+    display: none;
+}
+
 section article .article-header
 {
     display: flex;
@@ -285,11 +290,32 @@ input[type='range']::-webkit-slider-thumb {
     margin-top: 10px;
 }
 
-  #btnCalc
+  .btnActions
   {
+      border-radius: 10px;
       padding: 10px;
       background: #4357ad;
       color: #FFF;
+      margin: 10px;
+      outline: none;
+      cursor: pointer;
+      border-bottom: 2px solid #0f1425;
+  }
+
+  .btnActions:hover
+  {
+      background: #0f1425;
+  }
+
+  .btnActions:last-child
+  {
+      font-size: 20px;
+      font-weight: bold;
+  }
+
+  .btnActions:last-child:hover
+  {
+    background: #0f1425;
   }
 
   table {

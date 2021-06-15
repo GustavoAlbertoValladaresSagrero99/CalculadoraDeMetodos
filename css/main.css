@@ -172,6 +172,23 @@ section article p
     padding: 13px;
 }
 
+.howTo
+{
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.howTo i
+{
+    margin-right: 5px;
+}
+
+.howTo:hover
+{
+    color: #000;
+}
+
 
 
 #form .limites

@@ -406,9 +406,22 @@ export default class Process {
     return Number(math.evaluate(f).toString());
   }
 
+  static _normalizeFunc(func)
+  {
+    func = func.toLowerCase();
+    func = func.replaceAll("=0","");
+    func = func.replaceAll(" ", "");
+    func = func.replaceAll("sen","sin");
+    func = func.replaceAll("{","");
+    func = func.replaceAll("}","");
+
+    return func;
+  }
+
   //Estemetodo permite obtener los valores del DOM y crear un objeto Process
   static getProcess() {
     let func = $("#inpFuncion").val();
+    func = this._normalizeFunc(func);
     let inpX0 = Number($("#inpX0").val());
     let inpX1 = Number($("#inpX1").val());
     let inpTolerancia = $("#inpTolerancia").val();

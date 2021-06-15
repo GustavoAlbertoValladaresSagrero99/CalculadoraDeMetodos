@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="./res/img/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/extra.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Calculadora líneal de métodos</title>
+
+
+
+
+</head>
+<body>
+
+    
+    <header id="header">
+        <nav class="menu">
+            <div class="logo">
+                <a href="#"><i class="fas fa-calculator"></i> Calculadora de Métodos</a>
+                <a href="#" class="btn-menu" id="btn-menu"><i class="fas fa-bars icono"></i></a>
+            </div>
+            <div class="enlaces" id="enlaces">
+                <a href="/index.html"><i class="fas fa-home"></i> Inicio</a>
+                <a href="/tutos.html"><i class="fas fa-info"></i> Tutoriales</a>
+                <a href="/info.html"><i class="far fa-question-circle"></i> Info</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <div class="article-header">
+                <h1>Descripción</h1>
+                <a href="#" class="article-header-collapse"><i class="far fa-minus-square"></i></a>
+            </div>
+            <hr>
+            <div class="article-info">
+                <p>
+                    En esta sección se podran encontrar diversos tutoriales, que serviran como apoyo para la
+                    utilización de este programa.
+                </p>
+            </div>
+            <span class="article-span">Click en <i class="far fa-minus-square"></i> para mostrar/ocultar</span>
+        </article>
+    </section>
+        
+    
+    <main class="main">
+        <div class="video-container" id="video1">
+            <div class="video-title">
+                <p>Explicación de cada parte de la aplicación</p>
+            </div>
+            <div class="video-content">
+                <iframe src="https://www.youtube.com/embed/A1sk1GwnDIM" frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="video-container" id="video2">
+            <div class="video-title">
+                <p>Probando el programa con la función: <span><b>x<sup>3</sup>-x+3</b></span></p>
+            </div>
+            <div class="video-content">
+                <iframe src="https://www.youtube.com/embed/tDtPIi5Rcus" frameborder="0" allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <script src="scripts/math.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+</html>

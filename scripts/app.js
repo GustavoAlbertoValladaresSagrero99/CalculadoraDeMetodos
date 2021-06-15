@@ -50,6 +50,18 @@ class App {
     });
 
     $(this._btnMenu).on("click", this._toggleMenu);
+    
+    $("#noEsperado").on("click", (e)=>{
+      e.preventDefault();
+      Swal.fire({
+        title: '¿No se muestra como esperabas?',
+        text: 'Intenta encerrar la parte de la formula entre llaves. Ej: "{-x}"',
+        imageUrl: '/res/img/malaFormula.png',
+        imageWidth: 800,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+    });
 
     $("#methods").on("change", () => {
       let op = $("#methods").val();

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="shortcut icon" href="./res/img/favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/modal.css">
     <title>Calculadora líneal de métodos</title>
 
 
@@ -17,99 +17,6 @@
 </head>
 <body>
 
-    <div class="modalContainer">
-        <div class="modal-area">
-            
-        </div>
-        <div class="modal">
-            <p class="modal-title">
-                Pasos usando método: <span><b>{Sin método}</b></span>
-            </p>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <div class="ml-section-header">
-                        <p class="ml-section-title">
-                            Iteración: <span><b>1</b></span>
-                        </p>
-                        <div class="ml-section-values">
-                            <p>X0 = <span>0</span></p>
-                            <p>X1 = <span>1</span></p>
-                        </div>
-                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
-                    </div>
-                    <hr>
-                    <div class="ml-content">
-                        <div class="ml-step">
-                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="ml-section-header">
-                        <p class="ml-section-title">
-                            Iteración: <span><b>2</b></span>
-                        </p>
-                        <div class="ml-section-values">
-                            <p>X0 = <span>0</span></p>
-                            <p>X1 = <span>1</span></p>
-                        </div>
-                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
-                    </div>
-                    <hr>
-                    <div class="ml-content">
-                        <div class="ml-step">
-                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="ml-section-header">
-                        <p class="ml-section-title">
-                            Iteración: <span><b>3</b></span>
-                        </p>
-                        <div class="ml-section-values">
-                            <p>X0 = <span>0</span></p>
-                            <p>X1 = <span>1</span></p>
-                        </div>
-                        <a href="#" class="article-header-collapse mm"><i class="far fa-minus-square"></i></a>
-                    </div>
-                    <hr>
-                    <div class="ml-content">
-                        <div class="ml-step">
-                            <p>Paso: <span><b>1</b> calcular FX0</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>2</b> calcular FX1</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>3</b> calcular Xr</span></p>
-                        </div>
-                        <div class="ml-step">
-                            <p>Paso: <span><b>4</b> calcular FXr</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <header id="header">
         <nav class="menu">
@@ -127,9 +34,9 @@
                 </select>
             </div>
             <div class="enlaces" id="enlaces">
-                <a href="#"><i class="fas fa-home"></i> Inicio</a>
-                <a href="#"><i class="fas fa-info"></i> Tutoriales</a>
-                <a href="#"><i class="far fa-question-circle"></i> Info</a>
+                <a href="/index.html"><i class="fas fa-home"></i> Inicio</a>
+                <a href="/tutos.html"><i class="fas fa-info"></i> Tutoriales</a>
+                <a href="/info.html"><i class="far fa-question-circle"></i> Info</a>
             </div>
         </nav>
     </header>
@@ -173,6 +80,7 @@
                 <form id="form">
                     <label>Funcion</label>
                     <input type="text" id="inpFuncion" placeholder="Ejemplo: x^3+3*x^2+12*x+8 ¡NO AGREGAR =0!" autocomplete="off" required></input>
+                    <a href="/tutos.html#video1" class="howTo" title="Una pequeña información para utilizar el programa."><i class="fas fa-info-circle"></i>¿Cómo se utiliza?</a>
                     <div class="limites">
                         <div class="valores">
                             <label>Valor inicial X0</label>
@@ -222,13 +130,15 @@
                     <div class="formula">
                         <label>Formula</label>
                         <div id="math-preview"></div>
+                        <a href="#" class="howTo" id="noEsperado" title="Una pequeña información para utilizar el programa.">
+                            <i class="fas fa-info-circle"></i>¿No se muestra como esperabas?
+                        </a>
                     </div>
 
                     <div class="result-content">
                        <div class="result-title">
                         <label>Resultados</label>
                         
-                        <button type="button" id="showSteps">Pasos para solución</button>
                        </div>
                         <table>
                             <thead>
@@ -260,7 +170,6 @@
     <script src="scripts/math.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="scripts/jquery-3.6.0.min.js"></script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/app.js" type="module"></script>
 </body>
 </html>
